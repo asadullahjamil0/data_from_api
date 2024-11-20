@@ -1,19 +1,14 @@
 import { Component } from '@angular/core';
-import { UsersDataService } from './services/users-data.service';
+import { UsersDataService } from '../services/users-data.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css'
 })
-export class AppComponent {
-  title = 'data_from_api';
+export class FooterComponent {
   item: any;
-
-  constructor(private userData: UsersDataService) {
-
-  }
-
+  constructor(private userData: UsersDataService) { }
   // Method to trigger API request
   users() {
     this.userData.user().subscribe((data) => {
@@ -21,4 +16,5 @@ export class AppComponent {
       this.item = data;  // Store the data into item
     });
   }
+
 }
