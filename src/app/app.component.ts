@@ -21,4 +21,9 @@ export class AppComponent {
       this.item = data;  // Store the data into item
     });
   }
+  userFormData(data: any) {
+    this.userData.postUser(data).subscribe((results) => {
+      console.log(results);
+    })
+  }
 }

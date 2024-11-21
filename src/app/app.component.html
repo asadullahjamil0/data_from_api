@@ -9,3 +9,10 @@
 <button (click)="users()">Fetch Data</button>
 
 <app-footer></app-footer>
+
+<!-- Post method  -->
+<form #userForm="ngForm" (submit)="userFormData(userForm.value)">
+  <input type="text" ngModel name="title" placeholder="Enter Title">
+  <br> <br>
+  <button>Add new user</button>
+</form>
